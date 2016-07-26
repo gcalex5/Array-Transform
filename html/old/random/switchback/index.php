@@ -1,8 +1,8 @@
 <?php
-//Open a session so we can utilize $_SESSION for recursion
+//Open a session so we can utilize $_SESSION
 session_start(); //Not needed if it was in Drupal
 
-//Define the given input
+//Define given variables
 $input_one = array(
   "1" => "One",
   "2" => "Two",
@@ -18,7 +18,7 @@ $input_two = array(
   "3" => "You can have values on different levels",
 );
 
-//Ensure our session variable isn't improperly set and transform the input
+//Ensure our session variable isn't improperly set and call transform
 cleanSession();
 $output_one = transform($input_one);
 cleanSession();
